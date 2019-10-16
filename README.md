@@ -1,5 +1,6 @@
 # homework
-region homework_3{
+<details>
+  <summary>homework_3</summary>
 
 &emsp;&emsp;本次作业使用的数据集瑞典斯德哥尔摩国际和平研究所(SIPRI)发布的武器工业数据库（1949-2017）。
 
@@ -21,7 +22,7 @@ region homework_3{
 
 &emsp;&emsp;除了之前了解和使用过的工具，结合选题的性质，我查阅了一篇题为“情报产品可视化展示模式和方法研究”的论文，论文中对于图表类型与信息呈现、平台工具的解释拓宽了我的视域，但在了解到众多工具并立下尽可能多学的flag之后我也不免疑问：究竟将几个工具掌握精还是在入门层面掌握更多工具的使用规则对于行业实操更有意义？
 
-}region
+</details>
 
 <details>
 <summary>homework_2（待修改）</summary>
