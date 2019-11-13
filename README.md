@@ -42,7 +42,7 @@
 
 ## 工具
 
-Eviews、PS、Excel、Picular、web scraper
+Eviews、PS、Excel、Picular、web scraper、微词云
 
 ----
 
