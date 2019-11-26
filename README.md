@@ -1,4 +1,56 @@
 # homework
+
+<details>
+  <summary>homework_6</summary>
+  
+# 图1
+## 原图
+![](t4_2.jpg)
+## ggplot2制图
+![](t6_1.png)
+## 代码
+<pre><code>
+> setwd("C:/Users/pc/Desktop/大三上/可视化软件工具与应用/homework4")
+> library(readxl)
+> library(ggplot2)
+> datab <- read_excel("垃圾邮件数据.xlsx",sheet=6) #读取数据
+> rose_long <- melt(datab,id.vars="country",variable.name="index",value.name="count") #生成长表
+> p <- ggplot(rose_long,aes(x=index, y=count, fill=country))+ geom_bar(stat="identity", color="black") #先绘制条形图
+> p <- p+coord_polar()+scale_fill_brewer(palette="Blues") #转为玫瑰图并调色
+> p <- p+labs(title="垃圾邮件目标国不一定是被击中率最高的国家")+theme(title=element_text(size=12,color="black")) #添加图表标题并修改样式
+> p <- p+geom_text(aes(y = count+0.3, label = count), size = 3,color="#949494",position=position_dodge(width=0.85)) #添加数据标签
+</code></pre>
+
+-----------  
+
+# 图2
+## 原图
+![](t5_2.jpg)
+## ggplot2制图
+![](t6_2.png)
+## 代码
+<pre><code>
+> setwd("C:/Users/pc/Desktop/大三上/可视化软件工具与应用/homework5")
+> library(readxl)
+> read_excel("数据1.xlsx",sheet=4)
+# A tibble: 4 x 3
+   年份    CR    YL
+  <dbl> <dbl> <dbl>
+1  2011 14.2  0.242
+2  2012 13.5  0.232
+3  2013 10.8  0.204
+4  2014  9.43 0.185
+> dataa <- read_excel("数据1.xlsx",sheet=4)
+> library(ggplot2)
+> p <- ggplot(dataa, aes(x = CR, y = YL)) +xlab("惩罚的严厉程度（%）")+ylab("未成年人犯罪率（%）")+  geom_line(colour="#34446C",size=1)  # 修改坐标轴名称并制图
+> p+geom_point(colour="#34446C") # 加点
+> p2 <- p+labs(title="长期来看下调入刑年龄不利于降低未成年人犯罪率")+theme(title=element_text(size=12,color="black"))  #加标题
+> p3 <- p2+geom_text(x=11.5,y=0.201,color="#8C838A",label = paste0("y=",format(lm(YL ~ CR,dataa)$coef[1],digits = 2),"+",format(lm(YL ~ CR,dataa)$coef[2],digits = 2),"x"))+geom_smooth(method = "lm", se=FALSE, color="#B63D44", formula = y ~ x,size=1.5)
+> p3+theme(plot.title = element_text(hjust = 0.5)) # 标题居中
+</code></pre>
+
+</details>
+
 <details>
   <summary>homework_5</summary>
   
